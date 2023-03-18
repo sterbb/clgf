@@ -7,10 +7,10 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <form role="form" id="members-form" method="POST" autocomplete="nope">
+        <form role="form" id="payment-form" method="POST" autocomplete="nope">
             <div class="card">
                 <div class="card-body">
-                    <form id="payment-form" method="POST" autocomplete="nope" role="form">
+                  
 
                         <div class="row">
 
@@ -19,33 +19,33 @@
                                 <h4>HERNARES BRANCH</h4>
                                 <div class="row pt-5">
                                     <div class="col-md-4">
-                                        <label for="num-hnump" class="form-label">Num of Participants</label>
-                                        <input id="num-hnump" class="form-control" name="num-hnump" type="text"  autocomplete="nope" >
+                                        <label for="num-nump1" class="form-label">Num of Participants</label>
+                                        <input id="num-nump1" class="form-control" name="num-nump1" type="text"  autocomplete="nope" >
                                     </div>
                                     <div class="col-md-8">
-                                        <label for="num-hcashr" class="form-label">Cash Receivable</label>
-                                        <input id="num-hcashr" class="form-control" name="num-hcashr" type="text"  autocomplete="nope" readonly>
+                                        <label for="num-cashr1" class="form-label">Cash Receivable</label>
+                                        <input id="num-cashr1" class="form-control" name="num-cashr1" type="text"  autocomplete="nope" readonly>
                                     </div>
                                 </div>
 
                                 <div class="row pt-5">
                                     <div class="col-md-12">
-                                        <label for="num-hchand" class="form-label">Cash on Hand</label>
-                                        <input id="num-hchand" class="form-control" name="num-hchand" type="text"  autocomplete="nope"  >
+                                        <label for="num-chand1" class="form-label">Cash on Hand</label>
+                                        <input id="num-chand1" class="form-control" name="num-chand1" type="text"  autocomplete="nope"  >
                                     </div>
                                 </div>
 
                                 <div class="row pt-5">
                                     <div class="col-md-12">
-                                        <label for="num-hbal" class="form-label">  Remaining Balance</label>
-                                        <input id="num-hbal" class="form-control" name="num-hbal" type="text"  autocomplete="nope" readonly >
+                                        <label for="num-bal1" class="form-label">  Remaining Balance</label>
+                                        <input id="num-bal1" class="form-control" name="num-bal1" type="text"  autocomplete="nope" readonly >
                                     </div>
                                 </div>
 
                                 <div class="row pt-5">
                                     <div class="col-md-12">
-                                    <label for="hpayment-log">Cash Receipts</label>
-                                    <textarea class="form-control" id="hpaymentlog" rows="3"></textarea>
+                                    <label for="payment-log1">Cash Receipts</label>
+                                    <textarea class="form-control" id="paymentlog1" rows="3"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -54,33 +54,33 @@
                                 <h4>ALIJIS BRANCH</h4>
                                 <div class="row pt-5">
                                     <div class="col-md-4">
-                                        <label for="num-alnump" class="form-label">Num of Participants</label>
-                                        <input id="num-alnump" class="form-control" name="num-alnump" type="text"  autocomplete="nope" >
+                                        <label for="num-nump2" class="form-label">Num of Participants</label>
+                                        <input id="num-nump2" class="form-control" name="num-nump2" type="text"  autocomplete="nope" >
                                     </div>
                                     <div class="col-md-8">
-                                        <label for="num-alcashr" class="form-label">Cash Receivable</label>
-                                        <input id="num-alcashr" class="form-control" name="num-alcashr" type="text"  autocomplete="nope" readonly>
+                                        <label for="num-cashr2" class="form-label">Cash Receivable</label>
+                                        <input id="num-cashr2" class="form-control" name="num-cashr2" type="text"  autocomplete="nope" readonly>
                                     </div>
                                 </div>
 
                                 <div class="row pt-5">
                                     <div class="col-md-12">
-                                        <label for="num-alchand" class="form-label">Cash on Hand</label>
-                                        <input id="num-alchand" class="form-control" name="num-alchand" type="text"  autocomplete="nope"  >
+                                        <label for="num-chand2" class="form-label">Cash on Hand</label>
+                                        <input id="num-chand2" class="form-control" name="num-chand2" type="text"  autocomplete="nope"  >
                                     </div>
                                 </div>
 
                                 <div class="row pt-5">
                                     <div class="col-md-12">
-                                        <label for="num-albal" class="form-label">  Remaining Balance</label>
-                                        <input id="num-albal" class="form-control" name="num-albal" type="text"  autocomplete="nope" readonly >
+                                        <label for="num-bal2" class="form-label">  Remaining Balance</label>
+                                        <input id="num-bal2" class="form-control" name="num-bal2" type="text"  autocomplete="nope" readonly >
                                     </div>
                                 </div>
 
                                 <div class="row pt-5">
                                     <div class="col-md-12">
-                                    <label for="alpayment-log">Cash Receipts</label>
-                                    <textarea class="form-control" id="alpaymentlog" rows="3"></textarea>
+                                    <label for="payment-log2">Cash Receipts</label>
+                                    <textarea class="form-control" id="paymentlog2" rows="3"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -90,33 +90,33 @@
                                 <h4>SAGAY BRANCH</h4>
                                 <div class="row pt-5">
                                     <div class="col-md-4">
-                                        <label for="num-sagnump" class="form-label">Num of Participants</label>
-                                        <input id="num-sagnump" class="form-control" name="num-sagnump" type="text"  autocomplete="nope" >
+                                        <label for="num-nump3" class="form-label">Num of Participants</label>
+                                        <input id="num-nump3" class="form-control" name="num-nump3" type="text"  autocomplete="nope" >
                                     </div>
                                     <div class="col-md-8">
-                                        <label for="num-sagcashr" class="form-label">Cash Receivable</label>
-                                        <input id="num-sagcashr" class="form-control" name="num-sagcashr" type="text"  autocomplete="nope" readonly>
+                                        <label for="num-cashr3" class="form-label">Cash Receivable</label>
+                                        <input id="num-cashr3" class="form-control" name="num-cashr3" type="text"  autocomplete="nope" readonly>
                                     </div>
                                 </div>
 
                                 <div class="row pt-5">
                                     <div class="col-md-12">
-                                        <label for="num-sagchand" class="form-label">Cash on Hand</label>
-                                        <input id="num-sagchand" class="form-control" name="num-sagchand" type="text"  autocomplete="nope"  >
+                                        <label for="num-chand3" class="form-label">Cash on Hand</label>
+                                        <input id="num-chand3" class="form-control" name="num-chand3" type="text"  autocomplete="nope"  >
                                     </div>
                                 </div>
 
                                 <div class="row pt-5">
                                     <div class="col-md-12">
-                                        <label for="num-sagbal" class="form-label">  Remaining Balance</label>
-                                        <input id="num-sagbal" class="form-control" name="num-sagbal" type="text"  autocomplete="nope" readonly >
+                                        <label for="num-bal3" class="form-label">  Remaining Balance</label>
+                                        <input id="num-bal3" class="form-control" name="num-bal3" type="text"  autocomplete="nope" readonly >
                                     </div>
                                 </div>
 
                                 <div class="row pt-5">
                                     <div class="col-md-12">
-                                    <label for="sagpayment-log">Cash Receipts</label>
-                                    <textarea class="form-control" id="sagpaymentlog" rows="3"></textarea>
+                                    <label for="payment-log3">Cash Receipts</label>
+                                    <textarea class="form-control" id="paymentlog3" rows="3"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -129,33 +129,33 @@
                                 <h4>POTOTAN BRANCH</h4>
                                 <div class="row pt-5">
                                     <div class="col-md-4">
-                                        <label for="num-potnump" class="form-label">Num of Participants</label>
-                                        <input id="num-potnump" class="form-control" name="num-potnump" type="text"  autocomplete="nope" >
+                                        <label for="num-nump4" class="form-label">Num of Participants</label>
+                                        <input id="num-nump4" class="form-control" name="num-nump4" type="text"  autocomplete="nope" >
                                     </div>
                                     <div class="col-md-8">
-                                        <label for="num-potcashr" class="form-label">Cash Receivable</label>
-                                        <input id="num-potcashr" class="form-control" name="num-potcashr" type="text"  autocomplete="nope" readonly>
+                                        <label for="num-cashr4" class="form-label">Cash Receivable</label>
+                                        <input id="num-cashr4" class="form-control" name="num-cashr4" type="text"  autocomplete="nope" readonly>
                                     </div>
                                 </div>
 
                                 <div class="row pt-5">
                                     <div class="col-md-12">
-                                        <label for="num-potchand" class="form-label">Cash on Hand</label>
-                                        <input id="num-potchand" class="form-control" name="num-potchand" type="text"  autocomplete="nope"  >
+                                        <label for="num-chand4" class="form-label">Cash on Hand</label>
+                                        <input id="num-chand4" class="form-control" name="num-chand4" type="text"  autocomplete="nope"  >
                                     </div>
                                 </div>
 
                                 <div class="row pt-5">
                                     <div class="col-md-12">
-                                        <label for="num-potbal" class="form-label">  Remaining Balance</label>
-                                        <input id="num-potbal" class="form-control" name="num-potbal" type="text"  autocomplete="nope" readonly >
+                                        <label for="num-bal4" class="form-label">  Remaining Balance</label>
+                                        <input id="num-bal4" class="form-control" name="num-bal4" type="text"  autocomplete="nope" readonly >
                                     </div>
                                 </div>
 
                                 <div class="row pt-5">
                                     <div class="col-md-12">
-                                    <label for="potpayment-log">Cash Receipts</label>
-                                    <textarea class="form-control" id="paymentlog" rows="3"></textarea>
+                                    <label for="payment-log4">Cash Receipts</label>
+                                    <textarea class="form-control" id="paymentlog4" rows="3"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -164,33 +164,33 @@
                                 <h4>SILAY BRANCH</h4>
                                 <div class="row pt-5">
                                     <div class="col-md-4">
-                                        <label for="num-silnump" class="form-label">Num of Participants</label>
-                                        <input id="num-silnump" class="form-control" name="num-silnump" type="text"  autocomplete="nope" >
+                                        <label for="num-nump5" class="form-label">Num of Participants</label>
+                                        <input id="num-nump5" class="form-control" name="num-nump5" type="text"  autocomplete="nope" >
                                     </div>
                                     <div class="col-md-8">
-                                        <label for="num-silcashr" class="form-label">Cash Receivable</label>
-                                        <input id="num-silcashr" class="form-control" name="num-silcashr" type="text"  autocomplete="nope" readonly>
+                                        <label for="num-cashr5" class="form-label">Cash Receivable</label>
+                                        <input id="num-cashr5" class="form-control" name="num-cashr5" type="text"  autocomplete="nope" readonly>
                                     </div>
                                 </div>
 
                                 <div class="row pt-5">
                                     <div class="col-md-12">
-                                        <label for="num-silchand" class="form-label">Cash on Hand</label>
-                                        <input id="num-silchand" class="form-control" name="num-silchand" type="text"  autocomplete="nope"  >
+                                        <label for="num-chand5" class="form-label">Cash on Hand</label>
+                                        <input id="num-chand5" class="form-control" name="num-chand5" type="text"  autocomplete="nope"  >
                                     </div>
                                 </div>
 
                                 <div class="row pt-5">
                                     <div class="col-md-12">
-                                        <label for="num-silbal" class="form-label">  Remaining Balance</label>
-                                        <input id="num-silbal" class="form-control" name="num-silbal" type="text"  autocomplete="nope" readonly >
+                                        <label for="num-bal5" class="form-label">  Remaining Balance</label>
+                                        <input id="num-bal5" class="form-control" name="num-bal5" type="text"  autocomplete="nope" readonly >
                                     </div>
                                 </div>
 
                                 <div class="row pt-5">
                                     <div class="col-md-12">
-                                    <label for="silpayment-log">Cash Receipts</label>
-                                    <textarea class="form-control" id="silpaymentlog" rows="3"></textarea>
+                                    <label for="payment-log5">Cash Receipts</label>
+                                    <textarea class="form-control" id="paymentlog5" rows="3"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -200,40 +200,40 @@
                                 <h4>SIPALAY BRANCH</h4>
                                 <div class="row pt-5">
                                     <div class="col-md-4">
-                                        <label for="num-sipnump" class="form-label">Num of Participants</label>
-                                        <input id="num-sipnump" class="form-control" name="num-sipnump" type="text"  autocomplete="nope" >
+                                        <label for="num-nump6" class="form-label">Num of Participants</label>
+                                        <input id="num-nump6" class="form-control" name="num-nump6" type="text"  autocomplete="nope" >
                                     </div>
                                     <div class="col-md-8">
-                                        <label for="num-sipcashr" class="form-label">Cash Receivable</label>
-                                        <input id="num-sipcashr" class="form-control" name="num-sipcashr" type="text"  autocomplete="nope" readonly>
+                                        <label for="num-cashr6" class="form-label">Cash Receivable</label>
+                                        <input id="num-cashr6" class="form-control" name="num-cashr6" type="text"  autocomplete="nope" readonly>
                                     </div>
                                 </div>
 
                                 <div class="row pt-5">
                                     <div class="col-md-12">
-                                        <label for="num-sipchand" class="form-label">Cash on Hand</label>
-                                        <input id="num-sipchand" class="form-control" name="num-sipchand" type="text"  autocomplete="nope"  >
+                                        <label for="num-chand6" class="form-label">Cash on Hand</label>
+                                        <input id="num-chand6" class="form-control" name="num-chand6" type="text"  autocomplete="nope"  >
                                     </div>
                                 </div>
 
                                 <div class="row pt-5">
                                     <div class="col-md-12">
-                                        <label for="num-sipbal" class="form-label">  Remaining Balance</label>
-                                        <input id="num-sipbal" class="form-control" name="num-sipbal" type="text"  autocomplete="nope" readonly >
+                                        <label for="num-bal6" class="form-label">  Remaining Balance</label>
+                                        <input id="num-bal6" class="form-control" name="num-bal6" type="text"  autocomplete="nope" readonly >
                                     </div>
                                 </div>
 
                                 <div class="row pt-5">
                                     <div class="col-md-12">
-                                    <label for="sippayment-log">Cash Receipts</label>
-                                    <textarea class="form-control" id="sippaymentlog" rows="3"></textarea>
+                                    <label for="payment-log6">Cash Receipts</label>
+                                    <textarea class="form-control" id="paymentlog6" rows="3"></textarea>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
 
-                    </form>
+
 
                    
 
@@ -280,7 +280,7 @@
                                 
                                 
                                 <div class="float-sm-left">
-
+                                <button type="submit" id="btn-rload" class="btn btn-primary btn-rounded px-4"><i class="fa-regular fa-file-import"></i>&nbsp;&nbsp;Load</button>
                                     <button type="submit" class="btn btn-primary btn-rounded px-4"><i class="fa fa-save"></i>&nbsp;&nbsp;Save</button>
       
 
