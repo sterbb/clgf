@@ -26,7 +26,7 @@
                         </div>
                         <div class="text-center">
                             <p class="tx-16 fw-bolder" style="text-transform: uppercase;"><?php echo $_SESSION['name'];?></p>
-                            <p class="tx-12 text-muted" style="text-transform: uppercase;"><?php echo $_SESSION['access'];?></p>
+                            <p class="tx-12 text-muted" style="text-transform: uppercase;"><?php echo $_SESSION['accID'];?></p>
                         </div>
                     </div>
 
