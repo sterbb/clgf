@@ -7,10 +7,12 @@ if(true){
 		$pdo = $db->connect();
 
         $inactive = "inactive";
+        $empty = "";
 
-        $accstat = $pdo->prepare("UPDATE accounts SET acc_status = :acc_status WHERE accID = :accID");
+        $accstat = $pdo->prepare("UPDATE accounts SET acc_status = :acc_status, acc_log = :acc_log WHERE accID = :accID");
         $accstat -> bindParam(":acc_status", $inactive, PDO::PARAM_STR);
         $accstat -> bindParam(":accID", $_SESSION["accID"], PDO::PARAM_STR);
+        $accstat -> bindParam(":acc_log", $empty, PDO::PARAM_STR);
         $accstat->execute();
 
 

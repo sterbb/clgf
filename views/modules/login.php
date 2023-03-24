@@ -42,8 +42,8 @@ if(isset($_SESSION["name"])){
                     <button type="submit" value="Submit" name="button" id="login" class="btn login_btn" style="font-size:1.5em; margin-top:1em;">LOGIN</button> 
                 </div>
                 </form>
-            <div  class="d-flex justify-content-center mb-5 errorLogin" style="visibility:hidden;">
-                <h4 id="errorMessage">ERROR</h4>
+            <div  class="d-flex justify-content-center mb-5 errorLogin" style="visibility:visible;">
+                <h4 id="errorMessage"></h4>
             </div>
         </div>
     </div>
