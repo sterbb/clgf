@@ -1,3 +1,7 @@
+# order deny,allow
+# deny from all
+# allow from DESKTOP-E8K2FEO
+
 Options All -Indexes
 
 RewriteEngine On

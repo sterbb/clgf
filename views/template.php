@@ -94,6 +94,7 @@
     
     ?>
 
+
     
 
 
@@ -144,11 +145,9 @@
     <script src="views/js/login.js"></script>
     <script src="views/js/attendance.js"></script>
     <script src="views/helpers/helper.js"></script>
-    
-
-
 
     
+
 </body>
 
 </html>

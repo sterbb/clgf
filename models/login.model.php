@@ -1,10 +1,11 @@
 <?php
 require_once "connection.php";
 
+// Set the session cookie to expire when the browser is closed
 session_set_cookie_params(0);
 session_start();
 
-// Set the session cookie to expire when the browser is closed
+
 
 
 class ModelLogin{
