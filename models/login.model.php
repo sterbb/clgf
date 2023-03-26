@@ -70,14 +70,7 @@ class ModelLogin{
 							echo 'alert("message successfully sent")';
 							echo '</script>';
 
-							// foreach($result1 as $row1){
-							// 	if(strval($macAddress) == strval($row1[1])){
-							// 		$allowed = "hello";
-							// 		break;
-							// 	};
-	
-							// }
-
+			
 							$accstat = $pdo->prepare("UPDATE accounts SET acc_status = :acc_status, acc_log = :acc_log WHERE accID = :accID");
 							$accstat -> bindParam(":acc_status", $active, PDO::PARAM_STR);
 							$accstat -> bindParam(":accID", $row["accID"], PDO::PARAM_STR);

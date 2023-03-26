@@ -67,7 +67,7 @@
             
               <div class="table-responsive">
 
-                <table id="ScrolldataTableMember" class="table table-hover datatable-medium-font profile-grid-header eventattendeeTable" style="font-size: 1.2em">
+                <table id="ScrolldataTableMember" class="table table-hover datatable-medium-font profile-grid-header eventattendeeTable" style="font-size: 1.2em" data-paging='false'>
                   <thead>
                     <tr>
                       <th>MemberID</th>

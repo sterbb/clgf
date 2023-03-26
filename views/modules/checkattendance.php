@@ -56,7 +56,7 @@
                       <th hidden>Email</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody class="w-100">
                     <?php 
                       $attendee = (new ControllerAttendee)->ctrShowAttendeeList();
                       foreach ($attendee as $key => $value) {

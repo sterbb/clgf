@@ -1,5 +1,28 @@
 $(function() {
-  dateTime();
+
+  // broadcast that you are opening a page
+  localStorage.openpages = Date.now();
+  // runs only when another tab has been opened or change
+
+  window.addEventListener('storage', function(e){
+    if(e.key == "openpages"){
+      //if anybody is opening the same page
+      this.localStorage.page_available = Date.now();
+    }
+    // if another 
+    if(e.key == "page_available"){
+      Swal.fire({
+        icon: 'error',
+        title: 'ANOTHER TAB IS ALREADY OPENED!',
+        text: 'PLEASE CLOSE THIS TAB TO PROCEED'
+      }).then(function(result) {
+        window.open(location, '_self');
+      });;
+
+          }
+  },false);
+
+  dateTime(); 
   currentDate();
     $(function() {
       // validate signup form on keyup and submit

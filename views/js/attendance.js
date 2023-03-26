@@ -17,6 +17,7 @@ if (!$.fn.DataTable.isDataTable('.cur_attendeeTable')) {
 
 
 
+
 $(function() {
     dateTime();
     currentDate();
@@ -219,6 +220,7 @@ $(function() {
 
      
     }
+
 
 
 
