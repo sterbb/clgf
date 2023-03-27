@@ -63,6 +63,32 @@ $(function() {
         e.preventDefault();
         addMember();
     });
+
+    function progressbar() {
+        var progressBar = document.querySelector('.progress-bar');
+        var message = document.querySelector('.message');
+        var width = 0;
+      
+        // Reset progress bar before each save/submit action
+        progressBar.style.width = '0%';
+        progressBar.style.display = 'block';
+      
+        var interval = setInterval(function() {
+          if (width >= 100) {
+            clearInterval(interval);
+            progressBar.style.display = 'none'; // hide the progress bar
+            message.style.display = 'block'; // show the message
+            setTimeout(function() {
+              message.style.display = 'none'; // hide the message after 3 seconds
+            }, 3000);
+          } else {
+            width += 10;
+            progressBar.style.width = width + '%';
+          }
+        }, 200);
+        
+      }
+      
     
 
     function addMember(){
@@ -88,6 +114,7 @@ $(function() {
                 buttonsStyling: false
             }).then(function(result) {
                 if (result.value) {
+                    progressbar();
     
                     var trans_type = $("#trans_type").val();
                     var memID = $("#memID").val();
@@ -281,6 +308,32 @@ $(function() {
         $("#txt-branch").val('');
        
     }
+
+    $(".email").emailautocomplete({
+        suggClass:"eac-sugg",
+        domains: ["yahoo.com" ,"hotmail.com" ,"gmail.com" ,"me.com" ,"aol.com" ,"mac.com" ,"live.com" ,"comcast.net" ,"googlemail.com" ,"msn.com" ,"hotmail.co.uk" ,"yahoo.co.uk" ,"facebook.com" ,"verizon.net" ,"sbcglobal.net" ,"att.net" ,"gmx.com" ,"outlook.com" ,"icloud.com"]
+        });
+        
+
+
+
+        var phoneInput = document.getElementById('num-land');
+
+        // listen for input changes
+        phoneInput.addEventListener('input', function() {
+        var userInput = phoneInput.value.replace(/-/g, ''); // remove any existing dashes
+        var formattedNumber = formatNumber(userInput);
+
+        // set the formatted number as the input value
+        phoneInput.value = formattedNumber;
+        });
+
+        // function to format phone number with dashes
+        function formatNumber(phoneNumber) {
+        var formatted = phoneNumber.replace(/(\d{4})(\d{4})/, '$1-$2');
+        return formatted;
+        }
+
 
 
 

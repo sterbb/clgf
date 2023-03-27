@@ -133,16 +133,21 @@
                                 <div class="row mb-3">        
                                 <h6 class="mb-3">CONTACT INFORMATION</h6>
 
-                                    <div class="col-sm-4 form-group pt-3 " style="margin: right 10em;;">
+                                   
+                                <div class="col-sm-4 form-group pt-3 " style="margin: right 10em;;">
                                         <label for="tns-email" class="form-label">Email</label>
-                                        <input id="tns-email" class="form-control" name="tns-email" type="text" placeholder="Enter Email"  autocomplete="nope" >
+                                        <input id="tns-email" class="form-control email" name="tns-email" type="email" placeholder="Enter Email"  autocomplete="nope" >
                                     </div>
 
                                     <div class="col-sm-3 form-group pt-3">
                                         <label for="num-phone" class="form-label">Mobile Number</label>
-                                        <input id="num-phone" class="form-control" name="num-phone" type="text" placeholder="Enter Mobile Number"  autocomplete="nope" >
+                                        <input id="num-phone" class="form-control" name="num-phone" type="text" placeholder="Enter Mobile Number" maxlength="11"  autocomplete="nope" >
                                     </div>
 
+                                    <div class="col-sm-3 form-group pt-3">
+                                        <label for="num-land" class="form-label">Landline Number</label>
+                                        <input id="num-land" class="form-control" name="num-land" type="text" placeholder="Enter Landline Number" maxlength="9"  autocomplete="nope" >
+                                    </div>
                                 </div>
                             </div>
                         
@@ -165,6 +170,11 @@
                             </div> 
                         </div>
                 </div> <!-- end footer -->
+                 <!-- Progress bars-->
+                 <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="message" style="display: none; background-color: green; color: white; padding: 10px; border-radius: 5px;">Saved successfully!</div>
 
             </div><!-- end card-->
         </form>

@@ -200,6 +200,8 @@ $(function() {
         ipAddress = s.IPAddress(0);
         computerName = s.DNSHostName;
     }
+
+    
   
     $("#errorMessage").val(macAddress);
   

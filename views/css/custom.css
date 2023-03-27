@@ -482,3 +482,8 @@ button:focus{
   transform: translate(95vw,90vh);
   transform: translate(95vw,90vh);
 }
+
+.eac-sugg {
+  color:#949494;
+}
+

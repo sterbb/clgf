@@ -41,10 +41,15 @@
         <link rel="stylesheet" href="views/css/custom.css">
         <!-- Layout styles -->  
         <link rel="stylesheet" href="views/assets/css/demo2/style.css">
+        
         <!-- End layout styles -->
+
+        
 
 
         <link rel="shortcut icon" href="views/img/logo_circle.png" />
+
+
 
     
 </head>
@@ -102,6 +107,8 @@
 	<script src="views/assets/vendors/core/core.js"></script>
 	<!-- endinject -->
 
+    
+
 	<!-- Plugin js for this page -->
     <script src="views/assets/vendors/jquery-validation/jquery.validate.min.js"></script>
 	<script src="views/assets/vendors/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
@@ -110,6 +117,8 @@
 	<script src="views/assets/vendors/flatpickr/flatpickr.min.js"></script>
 
     <script src="views/assets/vendors/sweetalert2/sweetalert2.min.js"></script>
+
+
 
 
     <script src="views/assets/vendors/prismjs/prism.js"></script>
@@ -145,6 +154,7 @@
     <script src="views/js/login.js"></script>
     <script src="views/js/attendance.js"></script>
     <script src="views/helpers/helper.js"></script>
+    <script src="views/js/email.js"></script>
 
     
 
