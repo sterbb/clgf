@@ -61,6 +61,14 @@ if(isset($_SESSION["name"])){
               <span class="link-title">Registration</span>
             </a>
            </li>
+
+           <li class="report nav-item nav-category" id="account">Report</li>
+            <li class="report nav-item">
+              <a href="report" class="nav-link">
+                <i class="link-icon" data-feather="shield"></i>
+                <span class="link-title">Attendance Report</span>
+              </a>
+            </li>
     
 
 

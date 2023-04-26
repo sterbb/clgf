@@ -36,14 +36,6 @@ class ModelLogin{
 			$stmt1->execute();
 			$result1 = $stmt1->fetchAll(PDO::FETCH_NUM);
 
-		
-			
-			if(!$result){
-				echo"<style>.errorLogin{visibility:visible;}</style>";
-				echo"invalid";
-						
-			}else{
-	
 				foreach($result as $row){
 					$allowed;
 					$acc_status = $row['acc_status'];
@@ -81,23 +73,26 @@ class ModelLogin{
 							$_SESSION["access"] = $row["access"];
 							$_SESSION['accID'] = $row["accID"];
 							$_SESSION['acc_log'] = $macAddress;
+							$_SESSION['allowed'] = "allowed";
 							
 
 
 							$pdo->commit();
 							return "ok";
+						
 							
-					
+			
+						}elseif($result && (password_verify($data['password'], $row["password"])) && ($acc_status != $active) && $allowed != "true"){
+							$false = "false";
+							$_SESSION["name"] = $row['name'];
+							$_SESSION["allowed"] = $false;
+							$pdo->commit();
+							return "ok";
+							 
 
-					
-					
-					}else{
-						echo"invalid";
-						echo"<style>.errorLogin{visibility:visible;}</style>";
-
-					}
+						}
 				}
-			}	
+			
 
 			
 		}catch (Exception $e){

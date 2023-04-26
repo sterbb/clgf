@@ -58,38 +58,46 @@
     
     <?php
 
-    if(isset($_SESSION['name'])){
+    if(isset($_SESSION['name']) && isset($_SESSION['allowed'])){
         $name = $_SESSION['name'];
-
-        echo '<div class="main-wrapper">'; 
-        include "modules/sidebar.php"; 
+        $allowed = $_SESSION['allowed'];
+        // $allowed = "false";
+        $false = "false";
+        if($allowed == $false){
+            include "modules/404.php";
+        }else{
+            echo '<div class="main-wrapper">'; 
+            include "modules/sidebar.php"; 
             echo '<div class="page-wrapper">';   
             include "modules/header.php";
-        
-                echo '<div class="page-content">';  
-        if(isset($_GET["route"])){
-            if ($_GET["route"] == 'members' ||
-                $_GET["route"] == 'attendance' ||
-                $_GET["route"] == 'accounts' ||
-                $_GET["route"] == 'login'||
-                $_GET["route"] == 'logout'||
-                $_GET["route"] == 'checkattendance'||
-                $_GET["route"] == 'eventattendance'||
-                $_GET["route"] == 'registration'||
-                $_GET["route"] == 'viewattendance'){
-            include "modules/".$_GET["route"].".php";
-            }else{
-            include "modules/404.php";
-            }
-        }else{
-            include "modules/members.php";
-        }
+            echo '<div class="page-content">';  
 
-                echo '</div>';
-                //footer
-              include "modules/footer.php";
-             echo '</div>';
-        echo '</div>';  
+            if(isset($_GET["route"])){
+                if ($_GET["route"] == 'members' ||
+                    $_GET["route"] == 'attendance' ||
+                    $_GET["route"] == 'accounts' ||
+                    $_GET["route"] == 'login'||
+                    $_GET["route"] == 'logout'||
+                    $_GET["route"] == 'checkattendance'||
+                    $_GET["route"] == 'eventattendance'||
+                    $_GET["route"] == 'registration'||
+                    $_GET["route"] == 'report'||
+                    $_GET["route"] == 'viewattendance'){
+                include "modules/".$_GET["route"].".php";
+                }else{
+                include "modules/404.php";
+                }
+            }else{
+                include "modules/members.php";
+            }
+    
+            echo '</div>';
+            //footer
+            include "modules/footer.php";
+            echo '</div>';
+            echo '</div>';  
+        }
+       
     
     }else{
             include "modules/login.php";
