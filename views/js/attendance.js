@@ -4,8 +4,9 @@ if (!$.fn.DataTable.isDataTable('.cur_attendeeTable')) {
         "ajax": "ajax/attendee_list2.ajax.php",
         "deferRender": true,
         "retrieve": true,
-        "paging": true,
+        "paging": false,
         "processing": true,
+        scrollX: true,
         "language": {
             'loadingRecords': 'Loading Member Records...',
             'zeroRecords': 'No records to display',

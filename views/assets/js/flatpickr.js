@@ -23,4 +23,12 @@ $(function() {
     });
   }
 
+  if($('#report-range').length) {
+    flatpickr("#report-range", {
+      mode: 'range',
+      dateFormat: 'd-m-Y'
+    });
+  }
+
+
 });

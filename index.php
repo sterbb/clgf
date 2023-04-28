@@ -7,6 +7,7 @@ require_once "controllers/accounts.controller.php";
 require_once "controllers/attendee.controller.php";
 require_once "controllers/attendance.controller.php";
 require_once "controllers/payment.controller.php";
+require_once "controllers/report.controller.php";
 
 
 
@@ -18,6 +19,7 @@ require_once "models/accounts.model.php";
 require_once "models/attendee.model.php";
 require_once "models/attendance.model.php";
 require_once "models/payment.model.php";
+require_once "models/report.model.php";
 
 
 

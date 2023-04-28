@@ -10,53 +10,48 @@
         Time and Date
     </div>
     <div class="col-6">
-        <div class="row">
-            <div class="col-2">
-                <label for="txt-dob" class="form-label">Date</label>
-                <div class="input-group flatpickr" id="flatpickr-date">
-                    <input type="text" class="form-control" name="txt-dob" id="txt-dob" placeholder="Select date" data-input>
-                    <span class="input-group-text input-group-addon" data-toggle><i data-feather="calendar"></i></span>
-                </div>  
+        <div class="row justify-content-around align-items-center">
+            <div class="col-4">
+
             </div>
 
-            <div class="col-2">
-                <label for="txt-dob" class="form-label">Type</label>
-                <div class="input-group flatpickr" id="flatpickr-date">
-                    <input type="text" class="form-control" name="txt-dob" id="txt-dob" placeholder="Select date" data-input>
-                    <span class="input-group-text input-group-addon" data-toggle><i data-feather="calendar"></i></span>
-                </div>  
+            <div class="col-4">
+            <label for="flatpickr-range"  class="form-label">Date</label>
+                <input class="form-control flatpickr" type="text" placeholder="Select Dates.." id="report-range">
             </div>
-
-
-
-            <div class="col-2 form-group pt-3">
-                <label for="txt-category" class="form-label">ADULT</label>
-                 <input type="checkbox" style="height: 3em;width:3em;" class= "form-check-input" id="num-isactive" name="skill_check" value="1" />
-            </div>
-
-            <div class="col-2 form-group pt-3">
-                <label for="txt-category" class="form-label">HYPE</label>
-                 <input type="checkbox" style="height: 3em;width:3em;" class= "form-check-input" id="num-isactive" name="skill_check" value="1" />
-            </div>
-
-            <div class="col-2 form-group pt-3">
-                <label for="txt-category" class="form-label">JKIDS</label>
-                 <input type="checkbox" style="height: 3em;width:3em;" class= "form-check-input" id="num-isactive" name="skill_check" value="1" />
-            </div>
-
-            <div class="col-2 form-group pt-3">
-                <label for="txt-category" class="form-label">KAYA</label>
-                 <input type="checkbox" style="height: 3em;width:3em;" class= "form-check-input" id="num-isactive" name="skill_check" value="1" />
-            </div>
-            
         </div>
+
+
+        <div class="row justify-content-around align-items-center pt-4"> 
+
+
+            <div class="col-2 form-group pt-1 ">
+                <label for="check-adult" class="form-label pt-3">ADULT</label>
+                 <input type="checkbox" style="height: 3em;width:3em;" class= "form-check-input" id="check-adult" name="check-adult" value="1" />
+            </div>
+
+            <div class="col-2 form-group pt-1"> 
+                <label for="check-hype" class="form-label pt-3">HYPE</label>
+                 <input type="checkbox" style="height: 3em;width:3em;" class= "form-check-input" id="check-hype" name="check-hype" value="1" />
+            </div>
+
+            <div class="col-2 form-group pt-1">
+                <label for="check-jkids" class="form-label pt-3">JKIDS</label>
+                 <input type="checkbox" style="height: 3em;width:3em;" class= "form-check-input" id="check-jkids" name="check-jkids" value="1" />
+            </div>
+
+            <div class="col-2 form-group pt-1">
+                <label for="check-kaya" class="form-label pt-3">KAYA</label>
+                 <input type="checkbox" style="height: 3em;width:3em;" class= "form-check-input" id="check-kaya" name="check-kaya" value="1" />
+            </div>
+        </div>
+        
     </div>
 </div>
 
-<div class="row border border-7 h-75 mt-5 px-5" >
-    <div >
+<div class="border border-7 mt-4 px-5 report_preview" >
 
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur pariatur, 
-        impedit dicta sunt iste inventore commodi quis quam molestiae corporis officia quos blanditiis aliquid magnam? Tempora architecto adipisci omnis nam voluptates. sdlakf;jasd kjflaksjfd;lk
-    </div>
+   
 </div>
+
+<button type="button" class="btn btn-primary btn-rounded px-4" id="btn-print-attendance"><i class="fa fa-save"></i>&nbsp;&nbsp;PRINT</button>

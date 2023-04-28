@@ -163,6 +163,7 @@
     <script src="views/js/attendance.js"></script>
     <script src="views/helpers/helper.js"></script>
     <script src="views/js/email.js"></script>
+    <script src="views/js/report.js"></script>
 
     
 
