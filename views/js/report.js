@@ -41,7 +41,7 @@ $(function() {
             dataType: "json",
             success: function(answer) {
                 console.log(answer);
-                alert(JSON.stringify(answer));
+                var total_attendee = "";
 
                 $(".report_preview").empty();
                 var html = [];
@@ -67,13 +67,22 @@ $(function() {
                                  html.push('<td class="border border-2">'+ answer[i][i2][3]+'</td>')
                   
                                 html.push('</tr>');
+
+                                
                             }
 
-    
-                          
+                            total_attendee = (answer[i].length) -3;
+                            html.push('<tr class="border border-2">');
+
+                            html.push('<td class="" style=" width:50px;"></td>')
+                            html.push('<td class="border border-2" style=" width:200px;"> TOTAL ATTENDEE:&nbsp&nbsp&nbsp'+ total_attendee+'</td>')
+                
+                            html.push('</tr>');
+                           
+                            html.push("</table>");
+                 
                 }
-                   
-                    html.push("</table>");
+              
                 html.push("</div>");
 
 
@@ -114,8 +123,7 @@ $(function() {
         var pjkids =  $("#check-jkids").is(':checked'); 
         var pkaya =  $("#check-kaya").is(':checked'); 
 
-        alert(pdate1);
-        alert(pdate2);
+   
         
 
     
