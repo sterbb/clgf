@@ -4,51 +4,30 @@ session_start();
 require_once "../../../controllers/report.controller.php";
 require_once "../../../models/report.model.php";
 
-class printMembers{
-public function getMembersPrinting(){ 
+class printAttendance{
+public function getAttendancePrinting(){ 
 
-  $category = $_COOKIE["category"];
+  $daterange;
+  $date1 = $_COOKIE["pdate1"];
+  $date2 = $_COOKIE["pdate2"];
+  $adult = $_COOKIE["padult"];
+  $hype = $_COOKIE["phype"];
+  $kaya = $_COOKIE["pjkids"];
+  $jkids= $_COOKIE["pkaya"];
 
-  $members = (new ControllerMember)->ctrShowSpecMember($category);
+  if($date2 != ""){
+    $daterange = "(" . $date1 .") - (". $date2 .")";
+  }else{
+    $daterange = $date1;
+  }
+
+
+  $attendance = (new ControllerReport)-> ctrShowAttendanceReport($date1, $date2, $adult, $hype, $kaya, $jkids);
 
   require_once('tcpdf_include.php');
   $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
   $pdf->startPageGroup();
   $pdf->setPrintHeader(false);
-
-  $cdn = date('F Y');
-  $month = date("m");
-  $year = date("Y");
-
-
-  
-
-  function getSundays($y,$m){ 
-    $date = "$y-$m-01";
-    $first_day = date('N',strtotime($date));
-    $first_day = 7 - $first_day + 1;
-    $last_day =  date('t',strtotime($date));
-    $days = array();
-    for($i=$first_day; $i<=$last_day; $i=$i+7 ){
-        $days[] = $i;
-    }
-    return  $days;
-  }
-
-  $days = getSundays($year,$month);
-
-  function fifthSunday($day){
-    if(count($day) == 5){
-      return $day[4];
-    }else{
-      return "";
-    }
-  }
-
-  $fsunday = fifthSunday($days);
- 
-
-
 
   $pdf->AddPage();
     $header = <<<EOF
@@ -59,7 +38,7 @@ public function getMembersPrinting(){
       </tr>
 
       <tr>
-      <td style="width:540px;text-align:center;font-size:1em;font-weight:bold;">$cdn</td> 
+      <td style="width:540px;text-align:center;font-size:1em;font-weight:bold;">$daterange</td> 
     </tr>
 
       <tr>
@@ -75,7 +54,7 @@ public function getMembersPrinting(){
   
 
       <tr >
-        <td style="width:540px;text-align:center;font-size:1.2em;font-weight:bold;">LIST OF $category</td> 
+        <td style="width:540px;text-align:center;font-size:1.2em;font-weight:bold;">ATTENDANCE LIST</td> 
       </tr> 
       <tr>
       <td></td>
@@ -91,11 +70,11 @@ public function getMembersPrinting(){
         <td style="border: 1px solid 	#202020;width:80px; height:20px; text-align:center;  font-size:1em; font-weight: bold;">CATEGORY</td>   
         
         
-        <td style="border: 1px solid 	#202020; width:48px; height:20px; text-align:center;  font-size:1em; font-weight:bold; background-color:#00d632;">$days[0]</td>  
-        <td style="border: 1px solid 	#202020; width:48px; height:20px; text-align:center;  font-size:1em; font-weight:bold;">$days[1]</td> 
-        <td style="border: 1px solid 	#202020; width:48px; height:20px; text-align:center;  font-size:1em; font-weight:bold;">$days[2]</td>  
-        <td style="border: 1px solid 	#202020; width:48px; height:20px; text-align:center;  font-size:1em; font-weight:bold;">$days[3]</td>  
-        <td style="border: 1px solid 	#202020; width:48px; height:20px; text-align:center;  font-size:1em; font-weight:bold;">$fsunday</td>  
+        <td style="border: 1px solid 	#202020; width:48px; height:20px; text-align:center;  font-size:1em; font-weight:bold; background-color:#00d632;"></td>  
+        <td style="border: 1px solid 	#202020; width:48px; height:20px; text-align:center;  font-size:1em; font-weight:bold;"></td> 
+        <td style="border: 1px solid 	#202020; width:48px; height:20px; text-align:center;  font-size:1em; font-weight:bold;"></td>  
+        <td style="border: 1px solid 	#202020; width:48px; height:20px; text-align:center;  font-size:1em; font-weight:bold;"></td>  
+        <td style="border: 1px solid 	#202020; width:48px; height:20px; text-align:center;  font-size:1em; font-weight:bold;"></td>  
       </tr>                        
     </table>
 EOF;
@@ -106,16 +85,34 @@ EOF;
 
 
 
-  foreach ($members as $key => $value) {
-    $fullname = $value["fullname"];
-    $category = $value["category"];
+for($i = 0; $i <count($attendance); $i++){
+  //   $fullname = $value["fullname"];
+  //   $category = $value["category"];
+
+  $curdate = $attendance[$i][count($attendance[$i])-2];
+  $curid = $attendance[$i][count($attendance[$i])-1];
+  $curtype = $attendance[$i][count($attendance[$i])-3];
+
+  $curdetails = $curdate. '  -  '. $curid . ' (' .$curtype . ')';
+
+  $headcontent ='
+   <h4>'.$curdetails.'</h4>
+   <table>    
+
+  ';
+
+  for($i2 = 0; $i2 < count($attendance[$i])-3; $i2++){
+
+      $curname = $attendance[$i][$i2][1];
+      $curcat = $attendance[$i][$i2][3];
+
+  
    
-      $content = <<<EOF
-      <table>    
-        <tr>
+      $headcontent .= <<<EOF
+          <tr>
           <td style="width:25px;"></td>
-          <td style="border: 1px solid #666; width:170px; text-align:center; font-size:0.9em; padding:50px;">$fullname</td>                                                             
-          <td style="border: 1px solid #666; width: 80px; text-align:center; font-size:0.9em; padding:50px;">$category</td>     
+          <td style="border: 1px solid #666; width:170px; text-align:center; font-size:0.9em; padding:50px;">$curname</td>                                                             
+          <td style="border: 1px solid #666; width: 80px; text-align:center; font-size:0.9em; padding:50px;">$curcat</td>     
           
           <td style="border: 1px solid 	#202020; width:48px; height:20px; text-align:center;  font-size:1em; font-weight: bold;"></td>  
           <td style="border: 1px solid 	#202020; width:48px; height:20px; text-align:center;  font-size:1em; font-weight: bold;"></td>  
@@ -123,9 +120,14 @@ EOF;
           <td style="border: 1px solid 	#202020; width:48px; height:20px; text-align:center;  font-size:1em; font-weight: bold;"></td>  
           <td style="border: 1px solid 	#202020; width:48px; height:20px; text-align:center;  font-size:1em; font-weight: bold;"></td> 
         </tr>                
-      </table>
+
 EOF;
-      $pdf->writeHTML($content, false, false, false, false, '');
+
+      } 
+
+      $headcontent .= '</table>';
+
+      $pdf->writeHTML($headcontent , false, false, false, false, '');
     }
 
   $footer = <<<EOF
@@ -143,10 +145,12 @@ EOF;
 EOF;
       $pdf->writeHTML($footer, false, false, false, false, '');     
 
-    $pdf->Output('members_list.pdf', 'I');
+    $pdf->Output('attendance_list.pdf', 'I');
+
+
    }
   }  
 
-  $membersForm = new printMembers();
-  $membersForm -> getMembersPrinting();
+  $attendanceForm = new printAttendance();
+  $attendanceForm -> getAttendancePrinting();
 ?>

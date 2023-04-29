@@ -90,6 +90,7 @@ class ModelReport{
             foreach($result as $row){
                 $attid = $row["attendanceid"];
                 $attdate = $row["sdate"];
+                $atttype = $row["stype"];
                 
                 $att_status = "1";
 
@@ -98,7 +99,7 @@ class ModelReport{
                 $stmt2 -> bindParam(":astatus", $att_status, PDO::PARAM_STR);
                 $stmt2 -> execute();
                 $result2= $stmt2 -> fetchAll();
-
+                array_push($result2, $atttype);
                 array_push($result2, $attdate);
                 array_push($result2, $attid);
 

@@ -51,19 +51,21 @@ $(function() {
                     
                 for(var i = 0; i <answer.length; i++){
                 
-                        html.push('<h4 class="py-3">'+  answer[i][ (answer[i].length) -1]+ '  (' + answer[i][(answer[i].length) -2]+')</h4>');
+                        html.push('<h4 class="py-3">'+  answer[i][ (answer[i].length) -3] + '  -  '+ answer[i][ (answer[i].length) -2]+ '  (' + answer[i][(answer[i].length) -1]+')</h4>');
                         html.push('<table class="table mx-auto w-auto border border-2">');
                             html.push("<thead class='border border-2'>");
                                 html.push("<tr>");
                                     html.push("<th class='table_head_left_fixed border border-2'>NAME</th>");
                                     html.push("<th class='table_head_left_fixed border border-2'>CATEGORY</th>");
+
                                 html.push("</tr>");
                             html.push("</thead>");
 
-                            for(var i2 = 0; i2 <answer[i].length -2; i2++){
+                            for(var i2 = 0; i2 <answer[i].length -3; i2++){
                                 html.push('<tr class="border border-2">');
                                  html.push('<td class="border border-2">'+ answer[i][i2][1]+'</td>')
                                  html.push('<td class="border border-2">'+ answer[i][i2][3]+'</td>')
+                  
                                 html.push('</tr>');
                             }
 
@@ -124,8 +126,11 @@ $(function() {
         document.cookie = 'pjkids ='+ pjkids;
         document.cookie = 'pkaya ='+ pkaya;
 
+        window.open("extensions/tcpdf/pdf/attendance_list.php", "_blank");
+
 
     });
+    
 
 
 
